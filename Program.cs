@@ -1,4 +1,4 @@
-﻿internal class Program
+internal class Program
 {
     static void Main(string[] args)
     {
@@ -20,14 +20,14 @@
             n = Convert.ToInt32(Console.ReadLine());
         } while (!(n > 0));
 
-        int a = 1;
-        int b = 1;
+        int znak = 1;
+        int step = 1; 
 
-        for (int i = 1; b <= n; i += 2)
+        for (int i = 1; step <= n; i += 2)
         {
-            a *= -1;
-            sum += a * (1 / (i * Math.Pow(x, i)));
-            b++;
+            znak *= -1;
+            sum += znak * (1 / (i * Math.Pow(x, i)));
+            step++;
         }
 
         sum = -(Math.PI / 2) + sum;
@@ -35,3 +35,4 @@
         Console.WriteLine(sum);
     }
 }
+
